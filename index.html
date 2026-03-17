@@ -60,6 +60,51 @@
                     <p>Outra característica importante é que elementos com position: relative podem servir como referência para elementos com position: absolute.</p>
                     <div class="relative">Elemento Relative</div>
                 </div>
+                <div>
+                    <h2>position: absolute</h2>
+                    <p>O valor absolute remove o elemento do fluxo normal da página.</p>
+                    <p>Isso significa que os outros elementos da página se comportam como se ele não existisse.</p>
+                    <p>Um elemento com position: absolute é posicionado em relação ao elemento pai mais próximo que tenha position diferente de static.</p>
+                    <p>Se não existir nenhum elemento pai com position definido, ele será posicionado em relação ao body da página.</p>
+                    <p>Esse tipo de posicionamento é muito utilizado para:</p>
+                    <ul>
+                        <li>menus suspensos</li>
+                        <li>pop-ups</li>
+                        <li>elementos sobrepostos</li>
+                        <li>ícones posicionados sobre imagens</li>
+                    </ul>
+                    <div class="container">
+                        <div class="absolute">Elemento Absolute</div>
+                    </div>
+                </div>
+                <div>
+                    <h2>position: fixed</h2>
+                    <p>O valor fixed fixa o elemento em uma posição específica da tela, independente da rolagem da página.</p>
+                    <p>Isso significa que o elemento permanece sempre visível, mesmo quando o usuário faz scroll.</p>
+                    <p>Assim como o absolute, ele também é removido do fluxo normal da página.</p>
+                    <p>Esse valor é muito utilizado para:</p>
+                    <ul>
+                        <li>barras de navegação fixas</li>
+                        <li>botões de voltar ao topo</li>
+                        <li>menus flutuantes</li>
+                        <li>chat de suporte</li>
+                    </ul>
+                    <p>Um exemplo seria o header.</p>
+                </div>
+                <div>
+                    <h2>position: sticky</h2>
+                    <p>O valor sticky combina características do relative e do fixed.</p>
+                    <p>Inicialmente, o elemento se comporta como relative, seguindo o fluxo normal da página.</p>
+                    <p>Porém, quando o usuário rola a página e o elemento atinge um determinado ponto definido por top, bottom, left ou right, ele passa a se comportar como fixed, ficando fixo na tela.</p>
+                    <p>Esse valor é muito utilizado em:</p>
+                    <ul>
+                        <li>menus de navegação</li>
+                        <li>cabeçalhos de tabelas</li>
+                        <li>menus laterais</li>
+                        <li>chat de suporte</li>
+                    </ul>
+                    <div class="sticky">Menu Sticky</div>
+                </div>
             </section>
         </main>
         <footer>
