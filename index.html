@@ -1,203 +1,334 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Position e Display</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1>Propriedades Position e Display no CSS</h1>
-        </header>
-        <main>
-            <section>
-                <div class="card">
-                    <h2>Conceito position</h2>
-                    <p>A propriedade position do CSS define como um elemento será posicionado dentro da página e em relação a outros elementos.</p>
-                    <p>Ela permite controlar a posição de um elemento utilizando propriedades como:</p>
-                    <ul>
-                        <li>top</li>
-                        <li>bottom</li>
-                        <li>left</li>
-                        <li>right</li>
-                    </ul>
-                    <p>Dependendo do valor utilizado, o elemento pode seguir o fluxo normal da página ou ser retirado dele, permitindo posicionamentos mais específicos.</p>
-                    <p>Os principais valores da propriedade position são:</p>
-                    <ul>
-                        <li>static</li>
-                        <li>relative</li>
-                        <li>absolute</li>
-                        <li>fixed</li>
-                        <li>fixed</li>
-                    </ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position e Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Propriedades Position e Display no CSS</h1>
+    </header>
+    <main>
+        <section>
+            <div class="card">
+                <h2>Conceito position</h2>
+                <p>A propriedade position do CSS define como um elemento será posicionado dentro da página e em relação
+                    a outros elementos.</p>
+                <p>Ela permite controlar a posição de um elemento utilizando propriedades como:</p>
+                <ul>
+                    <li>top</li>
+                    <li>bottom</li>
+                    <li>left</li>
+                    <li>right</li>
+                </ul>
+                <p>Dependendo do valor utilizado, o elemento pode seguir o fluxo normal da página ou ser retirado dele,
+                    permitindo posicionamentos mais específicos.</p>
+                <p>Os principais valores da propriedade position são:</p>
+                <ul>
+                    <li>static</li>
+                    <li>relative</li>
+                    <li>absolute</li>
+                    <li>fixed</li>
+                    <li>fixed</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>position: static</h2>
+                <p>O valor static é o valor padrão de todos os elementos HTML.</p>
+                <p>Quando um elemento possui position: static, ele segue o fluxo normal da página, aparecendo exatamente
+                    na ordem em que está no código HTML.</p>
+                <p>Nesse modo, o elemento não pode ser movido usando:</p>
+                <ul>
+                    <li>top</li>
+                    <li>bottom</li>
+                    <li>left</li>
+                    <li>right</li>
+                </ul>
+                <p>Ou seja, essas propriedades não têm efeito quando o position é static.</p>
+                <p>Esse valor geralmente é utilizado quando não é necessário alterar o posicionamento do elemento.</p>
+                <div class="static">Elemento Static</div>
+            </div>
+            <div class="card">
+                <h2>position: relative</h2>
+                <p>O valor relative permite reposicionar um elemento em relação à sua posição original.</p>
+                <p>Diferente do static, ele aceita as propriedades:</p>
+                <ul>
+                    <li>top</li>
+                    <li>bottom</li>
+                    <li>left</li>
+                    <li>right</li>
+                </ul>
+                <p>Mesmo sendo movido, o elemento continua ocupando seu espaço original no layout. Ou seja, os outros
+                    elementos continuam se comportando como se ele ainda estivesse na posição inicial.</p>
+                <p>Outra característica importante é que elementos com position: relative podem servir como referência
+                    para elementos com position: absolute.</p>
+                <div class="relative">Elemento Relative</div>
+            </div>
+            <div class="card">
+                <h2>position: absolute</h2>
+                <p>O valor absolute remove o elemento do fluxo normal da página.</p>
+                <p>Isso significa que os outros elementos da página se comportam como se ele não existisse.</p>
+                <p>Um elemento com position: absolute é posicionado em relação ao elemento pai mais próximo que tenha
+                    position diferente de static.</p>
+                <p>Se não existir nenhum elemento pai com position definido, ele será posicionado em relação ao body da
+                    página.</p>
+                <p>Esse tipo de posicionamento é muito utilizado para:</p>
+                <ul>
+                    <li>menus suspensos</li>
+                    <li>pop-ups</li>
+                    <li>elementos sobrepostos</li>
+                    <li>ícones posicionados sobre imagens</li>
+                </ul>
+                <div class="container">
+                    <div class="absolute">Elemento Absolute</div>
                 </div>
-                <div class="card">
-                    <h2>position: static</h2>
-                    <p>O valor static é o valor padrão de todos os elementos HTML.</p>
-                    <p>Quando um elemento possui position: static, ele segue o fluxo normal da página, aparecendo exatamente na ordem em que está no código HTML.</p>
-                    <p>Nesse modo, o elemento não pode ser movido usando:</p>
-                    <ul>
-                        <li>top</li>
-                        <li>bottom</li>
-                        <li>left</li>
-                        <li>right</li>
-                    </ul>
-                    <p>Ou seja, essas propriedades não têm efeito quando o position é static.</p>
-                    <p>Esse valor geralmente é utilizado quando não é necessário alterar o posicionamento do elemento.</p>
-                    <div class="static">Elemento Static</div>
+            </div>
+            <div class="card">
+                <h2>position: fixed</h2>
+                <p>O valor fixed fixa o elemento em uma posição específica da tela, independente da rolagem da página.
+                </p>
+                <p>Isso significa que o elemento permanece sempre visível, mesmo quando o usuário faz scroll.</p>
+                <p>Assim como o absolute, ele também é removido do fluxo normal da página.</p>
+                <p>Esse valor é muito utilizado para:</p>
+                <ul>
+                    <li>barras de navegação fixas</li>
+                    <li>botões de voltar ao topo</li>
+                    <li>menus flutuantes</li>
+                    <li>chat de suporte</li>
+                </ul>
+                <p>Um exemplo seria o header.</p>
+            </div>
+            <div class="card">
+                <h2>position: sticky</h2>
+                <p>O valor sticky combina características do relative e do fixed.</p>
+                <p>Inicialmente, o elemento se comporta como relative, seguindo o fluxo normal da página.</p>
+                <p>Porém, quando o usuário rola a página e o elemento atinge um determinado ponto definido por top,
+                    bottom, left ou right, ele passa a se comportar como fixed, ficando fixo na tela.</p>
+                <p>Esse valor é muito utilizado em:</p>
+                <ul>
+                    <li>menus de navegação</li>
+                    <li>cabeçalhos de tabelas</li>
+                    <li>menus laterais</li>
+                    <li>chat de suporte</li>
+                </ul>
+                <div class="sticky">Menu Sticky</div>
+            </div>
+        </section>
+
+        <section>
+
+            <div class="card">
+                <h2>Display: Flex</h2>
+                <p>O display Flex Coloca os elementos lado a lado, em uma única linha.</p>
+                <div class="Flex">
+                    <p class="time">Flemengo</p>
+                    <p class="time">Vasco</p>
+                    <p class="time">Botafogo</p>
                 </div>
-                <div class="card">
-                    <h2>position: relative</h2>
-                    <p>O valor relative permite reposicionar um elemento em relação à sua posição original.</p>
-                    <p>Diferente do static, ele aceita as propriedades:</p>
-                    <ul>
-                        <li>top</li>
-                        <li>bottom</li>
-                        <li>left</li>
-                        <li>right</li>
-                    </ul>
-                    <p>Mesmo sendo movido, o elemento continua ocupando seu espaço original no layout. Ou seja, os outros elementos continuam se comportando como se ele ainda estivesse na posição inicial.</p>
-                    <p>Outra característica importante é que elementos com position: relative podem servir como referência para elementos com position: absolute.</p>
-                    <div class="relative">Elemento Relative</div>
+            </div>
+
+            <div class="card">
+                <h2>Display: Grid</h2>
+                <p>O display Grid organiza os elementos em uma grade, tanto em linhas quanto em colunas.</p>
+                <div class="Grid">
+                    <p class="time">Flemengo</p>
+                    <p class="time">Vasco</p>
+                    <p class="time">Botafogo</p>
+                    <p class="time">Fluminense</p>
                 </div>
-                <div class="card">
-                    <h2>position: absolute</h2>
-                    <p>O valor absolute remove o elemento do fluxo normal da página.</p>
-                    <p>Isso significa que os outros elementos da página se comportam como se ele não existisse.</p>
-                    <p>Um elemento com position: absolute é posicionado em relação ao elemento pai mais próximo que tenha position diferente de static.</p>
-                    <p>Se não existir nenhum elemento pai com position definido, ele será posicionado em relação ao body da página.</p>
-                    <p>Esse tipo de posicionamento é muito utilizado para:</p>
-                    <ul>
-                        <li>menus suspensos</li>
-                        <li>pop-ups</li>
-                        <li>elementos sobrepostos</li>
-                        <li>ícones posicionados sobre imagens</li>
-                    </ul>
-                    <div class="container">
-                        <div class="absolute">Elemento Absolute</div>
+            </div>
+
+            <div class="card">
+                <h2>Display: Table</h2>
+                <p>O display Table organiza os elementos como uma tabela, com linhas e colunas.</p>
+
+                <div class="Table">
+                    <div class="table-row">
+                        <span>Flamengo</span><span>RJ</span><span>1898</span>
                     </div>
-                </div>
-                <div class="card">
-                    <h2>position: fixed</h2>
-                    <p>O valor fixed fixa o elemento em uma posição específica da tela, independente da rolagem da página.</p>
-                    <p>Isso significa que o elemento permanece sempre visível, mesmo quando o usuário faz scroll.</p>
-                    <p>Assim como o absolute, ele também é removido do fluxo normal da página.</p>
-                    <p>Esse valor é muito utilizado para:</p>
-                    <ul>
-                        <li>barras de navegação fixas</li>
-                        <li>botões de voltar ao topo</li>
-                        <li>menus flutuantes</li>
-                        <li>chat de suporte</li>
-                    </ul>
-                    <p>Um exemplo seria o header.</p>
-                </div>
-                <div class="card">
-                    <h2>position: sticky</h2>
-                    <p>O valor sticky combina características do relative e do fixed.</p>
-                    <p>Inicialmente, o elemento se comporta como relative, seguindo o fluxo normal da página.</p>
-                    <p>Porém, quando o usuário rola a página e o elemento atinge um determinado ponto definido por top, bottom, left ou right, ele passa a se comportar como fixed, ficando fixo na tela.</p>
-                    <p>Esse valor é muito utilizado em:</p>
-                    <ul>
-                        <li>menus de navegação</li>
-                        <li>cabeçalhos de tabelas</li>
-                        <li>menus laterais</li>
-                        <li>chat de suporte</li>
-                    </ul>
-                    <div class="sticky">Menu Sticky</div>
-                </div>
-            </section>
+                    <div class="table-row">
+                        <span>Vasco</span><span>RJ</span><span>1898</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Botafogo</span><span>RJ</span><span>1898</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Fluminense</span><span>RJ</span><span>1898</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Santos</span><span>SP</span><span>1898</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Palmeiras</span><span>SP</span><span>1898</span>
+                    </div>
+                    <div class="table-row">
+                        <span>São Paulo</span><span>SP</span><span>1898</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Corintians</span><span>SP</span><span>1898</span>
+                    </div>
 
-            <section>
-
-                <div class="card">
-                    <h2>Display: Flex</h2>
-                    <div class="Flex"></div>
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Grid</h2>
-                    <div class="Grid"></div>
+            <div class="card">
+                <h2>Display: Block</h2>
+                <div class="Block">
+                    <p>O Display Block ele ocupa toda a linha disponível, mesmo que não tenha conteúdo suficiente para
+                        preencher a linha.</p>
+                    <p>Exemplo: Um parágrafo de texto — ocupa a linha inteira independente do tamanho.</p>
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Table</h2>
-                    <div class="Table"></div>
+            <div class="card">
+                <h2>Display: Block Flow</h2>
+                <div class="BlockFlow">
+                    <p>Praticamente Igual ao display: block normal. Os elementos ficam um abaixo do outro, seguindo o
+                        fluxo padrão.</p>
+                    <p> O cabeçalho de um site — cada seção fica abaixo da anterior.</p>
+
+                    <p class="time">Primeiro Paragrafo</p>
+                    <p class="time">Segundo Paragrafo</p>
+                    <p class="time">Terceiro Paragrafo</p>
+
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Block</h2>
-                    <div class="Block"></div>
+            <div class="card">
+                <h2>Display: Block Flex</h2>
+                <p>Ele ocupa a linha toda, como block, mas organiza como um flex normal um ao lado do outro.</p>
+                <p>Exemplo: Uma navbar que ocupa 100% da largura e alinha os itens lado a lado internamente.</p>
+                <div class="BlockFlex">
+
+                    <p class="time">A</p>
+                    <p class="time">B</p>
+                    <p class="time">C</p>
+
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Block Flow</h2>
-                    <div class="BlockFlow"></div>
+            <div class="card">
+                <h2>Display: Block Grid</h2>
+                <p>Ele ocupa a linha toda como block, mas organiza tudo que precisa. Parecido com o display grid, so que
+                    ocupa toda a largura e divide o conteúdo em colunas.</p>
+                <div class="BlockGrid">
+
+                    <p class="time">A</p>
+                    <p class="time">B</p>
+                    <p class="time">C</p>
+                    <p class="time">D</p>
+                    <p class="time">E</p>
+                    <p class="time">F</p>
+
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Block Flex</h2>
-                    <div class="BlockFlex"></div>
+            <div class="card">
+                <h2>Display: Inline</h2>
+                <p>O Display Inline Ele faz com que o elemento ocupe apenas a largura necessária para seu conteúdo e
+                    não iniie em uma nova linha.</p>
+                    <div class="Inline">
+
+                    <p class="time">Hugo</p>
+                    <p class="time">Henrique</p>
+                    <p class="time">Ana</p>
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Block Grid</h2>
-                    <div class="BlockGrid"></div>
+            <div class="card">
+                <h2>Display: Inline-Block</h2>
+                <div class="InlineBlock">
+                    <p>Do inline: fica do lado dos outros elementos, não quebra a linha.</p>
+                    <p>Do block: aceita largura e altura definida.</p>
+                    <p>você consegue definir o tamanho exato, mas ele se encaixa do lado dos outros normalmente.</p>
+
+                    <div class="bloco roxo"></div>
+                    <div class="bloco verde"></div>
+                    <div class="bloco laranja"></div>
+
                 </div>
+            </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Block Flow root</h2>
-                    <div class="BlockFlowRoot"></div>
+            <div class="card">
+                <h2>Display: Inline Flex</h2>
+                    <p>O Display Inline Flex combina as características do inline e do flex.</p>
+                <div class="InlineFlex">
+                    <p class="time"> Palmeiras</p>
+                    <p class="time"> Santos</p>
+                    <p class="time"> São Paulo</p>
+                    <p class="time"> Corinthians</p>
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Inline</h2>
-                    <div class="Inline"></div>
+            <div class="card">
+                <h2>Display: Inline Grid</h2>
+                    <p>O Display Inline Grid combina as características do inline e do grid.</p>
+                <div class="InlineGrid">
+                    <p class="time">FLA</p>
+                    <p class="time">VAS</p>
+                    <p class="time">BOT</p>
+                    <p class="time">FLU</p>
+                    <p class="time">PAL</p>
+                    <p class="time">SAN</p>
+                    <p class="time">SAO</p>
+                    <p class="time">COR</p>
+
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Inline-Block</h2>
-                    <div class="InlineBlock"></div>
+            <div class="card">
+                <h2>Display: Inline Flow</h2>
+                <div class="InlineFlow">
+                    <p>O Display Inline Flow é usado para criar um fluxo que atua como um elemento em linha.</p>
+                    <p>O time do <span class="destaque">Flamengo</span> é o mais titulado do Brasil.</p>
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Inline Flex</h2>
-                    <div class="InlineFlex"></div>
+            <div class="card">
+                <h2>Display: Inline Flow-root</h2>
+                <div class="InlineFlowRoot">
+                    <p>O Display Inline Flow-root é usado para criar um contêiner de fluxo que atua como um elemento em
+                        linha.</p>
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Inline Grid</h2>
-                    <div class="InlineGrid"></div>
+            <div class="card">
+                <h2>Display: Flow root</h2>
+                <div class="FlowRoot">
+                    <p>O Display Flow-root é usado para criar um contêiner de fluxo que atua como um elemento de bloco.
+                    </p>
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Inline Flow</h2>
-                    <div class="InlineFlow"></div>
+            <div class="card">
+                <h2>Display: inline-grid</h2>
+                <div class="inline-grid">
+                    <p class="time">Flemengo</p>
+                    <p class="time">Vasco</p>
+                    <p class="time">Botafogo</p>
+                    <p class="time">Fluminense</p>
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Inline Flow-root</h2>
-                    <div class="InlineFlowRoot"></div>
+            <div class="card">
+                <h2>Display: inline-flex</h2>
+                <div class="inline-flex">
+                    <p class="time">Flemengo</p>
+                    <p class="time">Vasco</p>
+                    <p class="time">Botafogo</p>
+                    <p class="time">Fluminense</p>
                 </div>
+            </div>
 
-                <div class="card">
-                    <h2>Display: Flow root</h2>
-                    <div class="FlowRoot"></div>
-                </div>
+        </section>
+    </main>
+    <footer>
+        <p>Todos os Direitos reservados</p>
+    </footer>
+</body>
 
-                <div class="card">
-                    <h2>Display: inline-grid</h2>
-                    <div class="inline-grid"></div>
-                </div>
-
-                <div class="card">
-                    <h2>Display: inline-flex</h2>
-                    <div class="inline-flex"></div>
-                </div>
-
-            </section>
-        </main>
-        <footer>
-            <p>Todos os Direitos reservados</p>
-        </footer>
-    </body>
 </html>
