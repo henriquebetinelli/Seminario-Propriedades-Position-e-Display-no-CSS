@@ -6,7 +6,7 @@ body {
 }
 header {
     background-color: rgb(0, 115, 255);
-    display: flex;
+    display: block flex;
     align-items: center;
     justify-content: space-around;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -61,6 +61,140 @@ section {
     color: white;
     padding: 10px;
 }
+
+
+.Flex  {
+    display: flex; 
+    border-radius: 10px;
+    
+
+}
+.time {
+    background-color: #0c4ac5; 
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px; 
+}
+
+.Grid {
+    display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        
+}
+
+.Table {
+    display: table;
+    background-color: rgb(11, 136, 237);
+    border-radius: 15px;
+}
+
+.table-row {
+    display: table-row;
+    
+}
+
+.table-row span {
+    display: table-cell;
+    padding: 8px 12px;
+}
+
+
+.Block {
+    display: block; 
+}
+
+.BlockFlow {
+    display: block flow; 
+}
+
+.BlockFlex  {
+    display: block flex; 
+}
+
+.BlockGrid {
+    display: block grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.BlockFlowRoot  {
+    display: block flow-root; 
+}
+
+.Inline {
+    display: inline;
+    padding: 10px;
+}
+
+.Inline .time {
+    display: inline;
+}
+
+.InlineBlock {
+    display: inline-block; 
+} 
+
+.bloco {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 80px;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+}
+
+
+.roxo{ 
+    background-color: #002ef9; height: 35px; 
+}
+
+.verde{
+    background-color: #001e6f; height: 45px; 
+}
+
+.laranja{
+    background-color: #010742; height: 60px; 
+}
+
+.InlineFlex  {
+    display: inline flex; 
+}
+
+.InlineGrid  {
+    display: inline grid; 
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.InlineFlow  {
+    display: inline flow;
+}
+.destaque {
+    background-color: #0c4ac5;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.InlineFlowRoot  {
+    display: inline flow-root; 
+}
+
+.inline-grid  {
+    display: inline-grid; 
+    grid-template-columns: repeat(2, 1fr); 
+}
+
+.inline-flex  {
+    display: inline-flex; 
+    gap: 10px;
+}
+
+.FlowRoot  {
+    display: flow-root; 
+}
+
 footer{
     padding: 10px;
     text-align: center;
